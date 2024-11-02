@@ -1,3 +1,5 @@
+#This code creates a Listing Window into which you can write information from NX sessions
+
 ﻿import math
 import NXOpen
 import NXOpen.CAE
