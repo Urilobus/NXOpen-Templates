@@ -1,3 +1,7 @@
+#This code transfers points from .prt to .sim or .fem
+
+#The code must be launched from .prt file and the name of the file to which points are transferred must be written in workSimPart variable (line 48). Both file must be opened in one session.
+
 import math
 import NXOpen
 import NXOpen.CAE
