@@ -1,4 +1,6 @@
-﻿import math
+#code with which you can select several nodes and a reference coordinate system, as a result, the coordinates of the selected points are displayed in the information window
+
+import math
 import NXOpen
 import NXOpen.CAE
 import NXOpen.Preferences
@@ -10,7 +12,7 @@ def main() :
     workSimPart = theSession.Parts.BaseWork
     displaySimPart = theSession.Parts.BaseDisplay
 
-#Selecting points
+#Selecting nodes
     theUI = NXOpen.UI.GetUI()
     
     selManager = theUI.SelectionManager
@@ -35,7 +37,7 @@ def main() :
     respcsys = selManager.SelectTaggedObject("Select CSYS", "CSYS Selection", SelectionScope, SelectionAction, False, False, SelectionMaskArrayCSYS)
 
     
-#Creating a point measurement
+#Creating a nodes measurement
 
     MeasureManager = workSimPart.MeasureManager
 
@@ -48,7 +50,7 @@ def main() :
     
     lw.Open()
     
-#Doing Measurements
+#Do Measurements
 
     obj = [] 
     
